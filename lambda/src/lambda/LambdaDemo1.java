@@ -1,20 +1,21 @@
 package lambda;
 
-import java.text.DecimalFormat;
-import java.util.Arrays;
-import java.util.function.Function;
-
 @FunctionalInterface
 interface Interface1 {
 	int doubleNum(int i);
-
+	//接口的默认方法
 	default int add(int x, int y) {
 		return x + y;
 	}
+    default int multiply(int x, int y) {
+        return x * y;
+    }
 
 	static int sub(int x, int y) {
 		return x - y;
 	}
+
+
 }
 
 @FunctionalInterface
@@ -43,8 +44,9 @@ public strictfp class LambdaDemo1 {
 
 		Interface1.sub(10, 3);
 		System.out.println(i1.add(3, 7));
-		System.out.println(i1.doubleNum(20));
+		System.out.println(i1.doubleNum(20));//调用默认方法
 
+        //====下面几种lambda的写法====
 		// 这种是最常见写法
 		Interface1 i2 = i -> i * 2;
 
@@ -54,7 +56,5 @@ public strictfp class LambdaDemo1 {
 			System.out.println("-----");
 			return i * 2;
 		};
-
 	}
-
 }
