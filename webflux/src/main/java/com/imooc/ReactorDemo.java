@@ -69,7 +69,6 @@ public class ReactorDemo {
 		// 最终操作
 		// 这里就是jdk9的reactive stream
 		.subscribe(subscriber);
-
 	}
 
 }

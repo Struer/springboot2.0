@@ -30,10 +30,17 @@ public class TestController {
 		log.info("get2 end.");
 		return result;
 	}
+	/*
+	 /1和/2请求的后端执行效率对比：/1(阻塞)用5.002s，/2(非阻塞)用0.002s
+	 2019-05-04 23:58:35.321  INFO 17336 --- [ctor-http-nio-2] com.imooc.TestController                 : get1 start
+	 2019-05-04 23:58:40.322  INFO 17336 --- [ctor-http-nio-2] com.imooc.TestController                 : get1 end.
+	 2019-05-04 23:58:48.265  INFO 17336 --- [ctor-http-nio-2] com.imooc.TestController                 : get2 start
+	 2019-05-04 23:58:48.267  INFO 17336 --- [ctor-http-nio-2] com.imooc.TestController                 : get2 end.
+	 */
 
 	/**
 	 * Flux : 返回0-n个元素
-	 * 
+	 * produces：指定流生产者的类型
 	 * @return
 	 */
 	@GetMapping(value = "/3", produces = MediaType.TEXT_EVENT_STREAM_VALUE)

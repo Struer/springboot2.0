@@ -24,8 +24,8 @@ public class SSE extends HttpServlet {
 	}
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
-	 *      response)
+	 * 实现SSE基本的流程：
+	 * 设置ContentType和编码UTF-8，指定事件标识，每次返回的数据格式：data: + 数据 + 2个回车
 	 */
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {

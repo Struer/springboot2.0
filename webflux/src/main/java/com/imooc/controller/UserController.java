@@ -26,7 +26,7 @@ import reactor.core.publisher.Mono;
 public class UserController {
 
 	private final UserRepository repository;
-
+	//官方推荐使用构造函数的方式注入
 	public UserController(UserRepository repository) {
 		this.repository = repository;
 	}
