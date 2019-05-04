@@ -12,12 +12,10 @@ public class CurryDemo {
 
 	public static void main(String[] args) {
 		// 实现了x+y的级联表达式
-		Function<Integer, Function<Integer, Integer>> fun = x -> y -> x
-				+ y;
+		Function<Integer, Function<Integer, Integer>> fun = x -> y -> x + y;
 		System.out.println(fun.apply(2).apply(3));
-
-		Function<Integer, Function<Integer, Function<Integer, Integer>>> fun2 = x -> y -> z -> x
-				+ y + z;
+		// 实现三个数相加的级联表达式
+		Function<Integer, Function<Integer, Function<Integer, Integer>>> fun2 = x -> y -> z -> x + y + z;
 		System.out.println(fun2.apply(2).apply(3).apply(4));
 
 		int[] nums = { 2, 3, 4 };

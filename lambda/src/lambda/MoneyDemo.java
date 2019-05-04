@@ -3,10 +3,10 @@ package lambda;
 import java.text.DecimalFormat;
 import java.util.function.Function;
 
-class MoneyDemo {
+class MyMoney {
 	private final int money;
 
-	public MoneyDemo(int money) {
+	public MyMoney(int money) {
 		this.money = money;
 	}
 
@@ -18,11 +18,11 @@ class MoneyDemo {
 public class MoneyDemo {
 
 	public static void main(String[] args) {
-		MoneyDemo me = new MoneyDemo(99999999);
+		MyMoney me = new MyMoney(99999999);
 
 		Function<Integer, String> moneyFormat = i -> new DecimalFormat("#,###")
 				.format(i);
-		
+
 		// 函数接口链式操作
 		me.printMoney(moneyFormat.andThen(s -> "人民币 " + s));
 	}
