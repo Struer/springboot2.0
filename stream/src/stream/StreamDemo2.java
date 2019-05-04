@@ -11,7 +11,6 @@ public class StreamDemo2 {
 
 	public static void main(String[] args) {
 		List<String> list = new ArrayList<>();
-
 		// 从集合创建
 		list.stream();
 		list.parallelStream();
@@ -21,7 +20,7 @@ public class StreamDemo2 {
 
 		// 创建数字流
 		IntStream.of(1, 2, 3);
-		IntStream.rangeClosed(1, 10);
+		IntStream.rangeClosed(1, 10);//设定边界
 
 		// 使用random创建一个无限流
 		new Random().ints().limit(10);
@@ -29,7 +28,6 @@ public class StreamDemo2 {
 
 		// 自己产生流
 		Stream.generate(() -> random.nextInt()).limit(20);
-
 	}
 
 }

@@ -16,9 +16,6 @@ import java.util.stream.Stream;
  * 
  * 6. parallel/ sequetial 这2个操作也是中间操作(也是返回stream)
  * 		但是他们不创建流, 他们只修改 Head的并行标志
- * 
- * @author 晓风轻
- *
  */
 public class RunStream {
 
@@ -60,8 +57,7 @@ public class RunStream {
 		System.out.println(Thread.currentThread().getName() + " > " + s);
 		try {
 			TimeUnit.MILLISECONDS.sleep(5);
-		} catch (InterruptedException e) {
-		}
+		} catch (InterruptedException e) {}
 	}
 
 }
