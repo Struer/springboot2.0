@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
+ * Òì²½µÄservlet
  * Servlet implementation class AsyncServlet
  */
 @WebServlet(asyncSupported = true, urlPatterns = { "/AsyncServlet" })
