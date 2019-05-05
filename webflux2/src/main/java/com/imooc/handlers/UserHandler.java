@@ -42,6 +42,7 @@ public class UserHandler {
 	 */
 	public Mono<ServerResponse> createUser(ServerRequest request) {
 		// 2.0.0 是可以工作, 但是2.0.1 下面这个模式是会报异常
+//		User user = request.bodyToMono(User.class).block();
 		Mono<User> user = request.bodyToMono(User.class);
 
 		return user.flatMap(u -> {
